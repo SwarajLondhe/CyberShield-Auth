@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CyberShield Secure Area</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal" style="width: 600px;">
+        <h2>>> ACCESS GRANTED. WELCOME <span id="userDisplay"></span>_</h2>
+        <p>Encryption: <span style="color:#0f0;">AES-256 Active</span></p>
+        <p>Session Integrity: <span style="color:#0f0;">Verified</span></p>
+        
+        <h3>> LIVE_SECURITY_LOGS</h3>
+        <div class="log-box" id="logBox">Scanning...</div>
+        
+        <br>
+        <button id="logoutBtn" style="background:#f00; color:#fff;">TERMINATE_SESSION</button>
+    </div>
+
+    <script>
+        // Check if user is logged in
+        fetch('/api/auth-check').then(res => res.json()).then(data => {
+            if (!data.authenticated) window.location.href = 'index.html';
+            else document.getElementById('userDisplay').innerText = data.username.toUpperCase();
+        });
+
+        // Fetch fake/real logs
+        fetch('/api/logs').then(res => res.json()).then(data => {
+            const logBox = document.getElementById('logBox');
+            logBox.innerHTML = '';
+            data.forEach(log => {
+                logBox.innerHTML += `<div>[${log.timestamp}] - ${log.event}</div>`;
+            });
+        });
+
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            fetch('/api/logout', { method: 'POST' }).then(() => window.location.href = 'index.html');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CyberShield Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal">
+        <h2 id="sysHeader">CYBERSHIELD // AUTH_SYS</h2>
+        <div id="alertBox"></div>
+        
+        <form id="authForm">
+            <label>> USERNAME_</label>
+            <input type="text" id="username" required autocomplete="off">
+            
+            <label>> PASSWORD_</label>
+            <input type="password" id="password" required>
+            
+            <button type="submit" id="submitBtn">INITIATE_LOGIN</button>
+        </form>
+        
+        <span class="toggle-link" id="toggleMode">>> Switch to Register_</span>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
