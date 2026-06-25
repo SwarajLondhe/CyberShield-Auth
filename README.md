@@ -1,41 +1,161 @@
-# 🛡️ CyberShield Auth: Secure Login System
+# 🛡️ CyberShield Auth – Secure Login System
 
-[![Node.js](https://img.shields.io/badge/Node.js-Backend-green.svg)](https://nodejs.org/)
-[![Security](https://img.shields.io/badge/Security-OWASP_Top_10-blue.svg)](#)
+> A next-generation cybersecurity-focused authentication system built using Node.js & Express with a futuristic hacker-style UI.
+
+---
 
 ## 📌 Overview
-CyberShield Auth is a highly secure, full-stack authentication system built with Node.js and Express. It features a futuristic hacker-style terminal UI while enforcing strict backend security protocols designed to prevent common vulnerabilities like SQL Injection, XSS, and Brute Force attacks.
+
+CyberShield Auth is a full-stack secure authentication system designed using modern cybersecurity practices. It combines strong backend protection with a cyberpunk hacker-style terminal UI to simulate a real-world secure login environment.
+
+This system protects against major vulnerabilities such as:
+- SQL Injection
+- Cross-Site Scripting (XSS)
+- Brute Force Attacks
+- Session Hijacking
+
+---
 
 ## 🔐 Core Security Features
-* **Password Cryptography:** Passwords are never stored in plain text. They are hashed and salted using `bcrypt` (12 rounds).
-* **Anti-Brute Force (Rate Limiting):** IP addresses are temporarily blocked after 5 requests per 15 minutes.
-* **Account Lockout:** Users are locked out for 15 minutes after 5 consecutive failed login attempts.
-* **SQL Injection Prevention:** Uses parameterized queries via the SQLite ORM to prevent malicious SQL execution.
-* **XSS Mitigation:** Inputs are sanitized to prevent Cross-Site Scripting.
-* **Secure Session Management:** Cookies are handled securely with `httpOnly` properties to prevent session hijacking.
+
+- 🔑 Password Hashing using bcrypt (12 salt rounds)
+- 🚫 Anti-Brute Force Protection (5 requests / 15 min)
+- 🔒 Account Lockout after 5 failed attempts (15 min lock)
+- 🛡️ SQL Injection Prevention using parameterized queries
+- ⚠️ XSS Protection via input sanitization
+- 🍪 Secure Session Management (httpOnly cookies)
+
+---
 
 ## 🎨 UI/UX Features
-* **Cyberpunk Terminal Aesthetic:** Dark mode, neon green text, glowing box shadows.
-* **Dynamic Animations:** Real-time JavaScript typing effects for alerts and error messages.
-* **Live Security Dashboard:** A simulated secure area showing live database security logs.
+
+- 🖥️ Cyberpunk Terminal Design (black + neon green)
+- ⚡ Typing animation effects
+- 📊 Live security logs dashboard (simulation)
+- 💻 Hacker-style login experience
+
+---
+
+## 🧰 Tech Stack
+
+Frontend:
+- HTML5
+- CSS3
+- JavaScript
+
+Backend:
+- Node.js
+- Express.js
+
+Database:
+- SQLite
+
+Security Libraries:
+- bcrypt
+- express-session
+- express-rate-limit
+- helmet
+- csurf
+- validator
+
+---
+
+## 📁 Project Structure
+
+CyberShield-Auth/
+│
+├── public/
+│   ├── css/
+│   ├── js/
+│
+├── views/
+│   ├── login.html
+│   ├── register.html
+│   └── dashboard.html
+│
+├── routes/
+├── models/
+├── middleware/
+├── config/
+│   └── db.js
+│
+├── server.js
+├── package.json
+└── README.md
+
+---
 
 ## 🚀 How to Run Locally
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/SwarajLondhe/CyberShield-Auth.git
-   cd CyberShield-Auth
+### 1. Clone Repository
+git clone https://github.com/SwarajLondhe/CyberShield-Auth.git
+cd CyberShield-Auth
 
-   Install dependencies:
-code
-Bash
+### 2. Install Dependencies
 npm install
-Start the secure server:
-code
-Bash
+
+### 3. Start Server
 node server.js
-Access the application:
-Open your browser and navigate to http://localhost:3000
-👨‍💻 Author
-Swaraj Londhe
-GitHub: @SwarajLondhe
+
+### 4. Open Browser
+http://localhost:3000
+
+---
+
+## 🔍 Security Implementation Summary
+
+- Password Hashing ✅
+- Rate Limiting ✅
+- Account Lockout ✅
+- SQL Injection Protection ✅
+- XSS Protection ✅
+- Secure Sessions ✅
+- CSRF Protection ✅
+
+---
+
+## 💡 Future Enhancements
+
+- 🔐 Two-Factor Authentication (2FA)
+- 📧 Email Login Alerts
+- 🌍 IP Tracking System
+- 🤖 AI Threat Detection
+- 🔑 Password Reset System
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository  
+2. Create new branch  
+3. Commit changes  
+4. Push code  
+5. Open Pull Request  
+
+---
+
+## 📜 License
+
+MIT License
+
+---
+
+## 👨‍💻 Author
+
+Swaraj Londhe  
+GitHub: https://github.com/SwarajLondhe  
+
+---
+
+## ⭐ Support
+
+If you like this project:
+- Star ⭐ the repo
+- Fork 🍴 it
+- Share 📢 with others
+
+---
+
+## 💬 Final Note
+
+"Security is not a feature, it's a necessity."
