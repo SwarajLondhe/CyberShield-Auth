@@ -25,3 +25,17 @@ CyberShield Auth is a highly secure, full-stack authentication system built with
    ```bash
    git clone https://github.com/SwarajLondhe/CyberShield-Auth.git
    cd CyberShield-Auth
+
+   Install dependencies:
+code
+Bash
+npm install
+Start the secure server:
+code
+Bash
+node server.js
+Access the application:
+Open your browser and navigate to http://localhost:3000
+👨‍💻 Author
+Swaraj Londhe
+GitHub: @SwarajLondhe
